@@ -11,4 +11,18 @@ public abstract class Player {
 
 
     public abstract Roshambo getRPS();
+
+    public Roshambo getRPSInput(String userInput) {
+        Roshambo result = Roshambo.SCISSORS;
+        if(userInput.equalsIgnoreCase("scissor")){
+            result = Roshambo.SCISSORS;;
+        }
+        else if(userInput.equalsIgnoreCase("rock")){
+            result = Roshambo.ROCK;;
+        }
+        else if(userInput.equalsIgnoreCase("paper")){
+            result = Roshambo.PAPER;;
+        }
+        return result;
+    }
 }
